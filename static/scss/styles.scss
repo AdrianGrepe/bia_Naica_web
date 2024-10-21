@@ -1,0 +1,67 @@
+/*
+Theme Name: Blank Theme
+Author: El Cultivo
+Author URI: http://elcultivo.mx
+Description: Configuración básica para cualquier tema desarrollado en Shopify por El Cultivo
+Version: 1
+*/
+
+//***    C O N F I G     ***//
+@import './config/_colors';
+@import './config/_normalize';
+@import './config/_breaks';
+@import './config/_ipad';
+@import './config/_over';
+@import './config/_under';
+@import './config/_font-size';
+
+//***   F O N T S    ***//
+@import './fonts/_fonts';
+@import './fonts/_paragraphs';
+@import './fonts/_titles';
+
+//***   E L E M E N T S     ***//
+@import './elements/_button';
+@import './elements/_input';
+
+//***   G E N E R A L     ***//
+@import './general/_error';
+@import './general/_footer';
+@import './general/_header';
+@import './general/_helpers';
+@import './general/_images';
+@import './general/_wa';
+@import './general/_form';
+@import './general/_thanks';
+@import './general/_pop-up';
+
+//***   C O N T A I N E R S     ***//
+@import './containers/_block';
+@import './containers/_grid';
+
+//***   H O M E     ***//
+@import './pages/home/_hero';
+@import './pages/home/_about';
+@import './pages/home/_tagline';
+@import './pages/home/_know';
+@import './pages/home/_partners';
+@import './pages/home/_clients';
+@import './pages/home/_message';
+
+//***   C R E D I T O R S     ***//
+@import './pages/acreedores/_hero';
+@import './pages/acreedores/_about';
+@import './pages/acreedores/_finances';
+@import './pages/acreedores/_calculator';
+
+//***   I N S U R A N C E    ***//
+@import './pages/seguros/_about';
+@import './pages/seguros/_information';
+
+//***   P A R T N E R S   ***//
+@import './pages/socios/_about';
+@import './pages/socios/_types';
+@import './pages/socios/_tagline';
+
+//***   L O G I N   ***//
+@import './pages/acceso/_main';

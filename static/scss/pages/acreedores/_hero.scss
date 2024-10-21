@@ -1,0 +1,68 @@
+.creditors{
+
+    &__hero{
+        width: 100%;
+        position: relative;
+        background-color: c(black);
+        min-height: 100vh;
+
+        .image-container{
+            width: 100%;
+            min-height: 100vh;
+            height: 100%;
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            left: 0;
+        }
+
+        .container{
+            position: relative;
+            z-index: 2;
+        }
+
+        &-container{
+            width: 75%;
+            padding: 110px 0;
+            margin: 0 0 0 auto;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            column-gap: 40px;
+            @include under(sm){
+                width: 100%;
+                padding: 85px 0 100px;
+                display: flex;
+                flex-direction: column-reverse;
+                align-items: flex-start;
+                justify-content: flex-start;
+                min-height: calc(100dvh - 85px);
+            }
+
+            .title{
+                color: c(blue);
+                margin: .7em auto 0;
+                text-align: center;
+                strong{
+                    color: c(white);
+                }
+                @include under(sm){
+                    grid-row: 2
+                }
+            }
+
+            .form__container{
+                @extend .txt-25;
+                margin: 1.5em 0 0;
+
+                .subtitle{
+                    text-align: center;
+                    margin: 0 0 30px;
+                }
+                @include under(sm){
+                    max-width: 400px;
+                    margin: 1.5em 0 0 auto;
+                }
+            }
+        }
+    }
+}

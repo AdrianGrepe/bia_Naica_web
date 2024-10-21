@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naica - Socios Comerciales</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}?v=1.0.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+</head>
+<body>
+    <main class="wrapper">
+        <!-- H e a d e r-->
+        <header class="header">
+            <nav class="header__nav">
+                <div class="container">
+                    <div class="header__container">
+                        <div class="header__logo">
+                            <a href="/" class="header__logo-link">
+                                <svg data-name="Grupo 210" xmlns="http://www.w3.org/2000/svg" width="280" height="67.488" viewBox="0 0 280 67.488">
+                                    <defs>
+                                      <clipPath id="clip-path">
+                                        <rect id="Rectángulo_223" data-name="Rectángulo 223" width="280" height="67.488" fill="none"/>
+                                      </clipPath>
+                                      <clipPath id="clip-path-3">
+                                        <rect id="Rectángulo_206" data-name="Rectángulo 206" width="2.665" height="25.309" fill="none"/>
+                                      </clipPath>
+                                      <clipPath id="clip-path-4">
+                                        <rect id="Rectángulo_208" data-name="Rectángulo 208" width="2.665" height="33.747" fill="none"/>
+                                      </clipPath>
+                                      <clipPath id="clip-path-5">
+                                        <rect id="Rectángulo_210" data-name="Rectángulo 210" width="2.665" height="42.176" fill="none"/>
+                                      </clipPath>
+                                      <clipPath id="clip-path-6">
+                                        <rect id="Rectángulo_212" data-name="Rectángulo 212" width="2.665" height="50.614" fill="none"/>
+                                      </clipPath>
+                                      <clipPath id="clip-path-10">
+                                        <rect id="Rectángulo_220" data-name="Rectángulo 220" width="2.665" height="59.051" fill="none"/>
+                                      </clipPath>
+                                      <clipPath id="clip-path-11">
+                                        <rect id="Rectángulo_222" data-name="Rectángulo 222" width="2.665" height="67.488" fill="none"/>
+                                      </clipPath>
+                                    </defs>
+                                    <g id="Grupo_230" data-name="Grupo 230" clip-path="url(#clip-path)">
+                                      <path id="Trazado_170" data-name="Trazado 170" d="M408.438,78.841v25.388h-1.362l-15.21-16.913v16.912h-4.011V78.841h1.4l15.172,17.253V78.841Z" transform="translate(-263.325 -53.527)" fill="#fff"/>
+                                      <path id="Trazado_171" data-name="Trazado 171" d="M517.1,100.066H505.862l-1.778,4.162h-4.275l11.01-25.387h1.362l11.01,25.387h-4.313Zm-5.6-13.772-4.2,10.329h8.361Z" transform="translate(-339.332 -53.527)" fill="#fff"/>
+                                      <rect id="Rectángulo_203" data-name="Rectángulo 203" width="4.01" height="25.387" transform="translate(199.182 25.314)" fill="#fff"/>
+                                      <g id="Grupo_211" data-name="Grupo 211">
+                                        <g id="Grupo_210-2" data-name="Grupo 210" clip-path="url(#clip-path)">
+                                          <path id="Trazado_172" data-name="Trazado 172" d="M696.175,78.838a12.385,12.385,0,0,1,10.707,5.751l-3.027,2.232a8.742,8.742,0,0,0-7.643-4.313,9.235,9.235,0,0,0,0,18.464,8.742,8.742,0,0,0,7.643-4.313l3.027,2.232a12.246,12.246,0,0,1-10.707,5.751,12.9,12.9,0,1,1,0-25.8" transform="translate(-463.735 -53.524)" fill="#fff"/>
+                                          <path id="Trazado_173" data-name="Trazado 173" d="M816.536,100.066H805.3l-1.778,4.162h-4.275l11.01-25.387h1.362l11.01,25.387h-4.313Zm-5.6-13.772-4.2,10.329H815.1Z" transform="translate(-542.627 -53.527)" fill="#fff"/>
+                                        </g>
+                                      </g>
+                                      <g id="Grupo_213" data-name="Grupo 213" transform="translate(0 42.179)">
+                                        <g id="Grupo_212" data-name="Grupo 212" clip-path="url(#clip-path-3)">
+                                          <image id="Rectángulo_205" data-name="Rectángulo 205" width="2.89" height="25.365" transform="translate(0 -0.056)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAABPCAYAAAA5kO9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAELSURBVEhL7ZXZisMwDEW9ZOka2nSGftf8VH/art1r8IMJsqSHMk8RHKKALF/LN8S+/kI2Qrj6ZGMv2ov2IoSuKJucJVxKMUq4lEOQcO8Ug0TpFCXQKaCaB50gTgCngzgB984QJ6DuFCW0I8C+ArproYRuUQrHnhLoFFDN891rgUV5iiZU85TToZqnmA5T5dHaF+IEtCOgxbborEIJ3aIeQZT4706wAmm0Fq190VLgu51w0zxlBPAMj3YE9Pff4q/z85lzShz+PP/8ZoMXBn+aHiu1usUfptudWt3iD8OyUKtb/DycL9TqFnvB6epftBv2NK1rzbth5+G61LwbdvTHY827YZ0dx5p3wpgPdbK/5L3lj/AAAAAASUVORK5CYII="/>
+                                        </g>
+                                      </g>
+                                      <g id="Grupo_215" data-name="Grupo 215" transform="translate(11.011 33.742)">
+                                        <g id="Grupo_214" data-name="Grupo 214" clip-path="url(#clip-path-4)">
+                                          <image id="Rectángulo_207" data-name="Rectángulo 207" width="2.89" height="34.034" transform="translate(-0.095 -0.287)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAABqCAYAAABu8XvkAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEhSURBVFhH7ZfhasMwDIRlu0na0W7taF+rsPd/lKXxLiwBUc6WfgyPQgQfUaKzfLGTQML96zuLEXE5VmMTbaJNhHhdUc6Ph8U/iEYLb6cRSZ32nnhB4zZOfWj+1BMvaGbjmLdOe0+8oJlFMFcHIr4VmpgntDSIWZAYzJ1GC+/dcbOaKFBa+KabsFgWvk7MwzPObcGcFj5P7OIzXhF/QzTtPfG10Xg78a3QtPfEC5pXNs4LGoj4g6Zp74mvjQafQyy9QWPjaRhuN5E81Uh9f70iwU9XGYgunyITTsqkrjtf2GgNRB/vSKiXlbTbnU5IaIcViI5HVtCklA5vzKwGov0eauplJcU4DEgwogxEXccKmvDrqR4hxr5f8mKEgF5LXgiRH0Onhuntzv53AAAAAElFTkSuQmCC"/>
+                                        </g>
+                                      </g>
+                                      <g id="Grupo_217" data-name="Grupo 217" transform="translate(23.789 25.312)">
+                                        <g id="Grupo_216" data-name="Grupo 216" clip-path="url(#clip-path-5)">
+                                          <image id="Rectángulo_209" data-name="Rectángulo 209" width="2.89" height="42.382" transform="translate(-0.03 -0.206)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAACECAYAAABCvwEWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAE8SURBVFhH7ZZhasMwDIXjeG0Sp6bpSs++++wGu09t7xk0CMGW9MMEBn7iw/rxIsnGCTFfP99pEDTSyqqbuqmboG7qpm6Cuul0U4wxSIwpxCCBSgFunhEFxYApvCV0g8OJgjx5JpTkye1EKQdHVym0h1lusUfXLsEqoR0ci0AeHF6e3A474Dn90u2eqAUOE2+EgPII4JRoODiqoSRP03ZYBJTnhEWKvLu3hLJSYYYjeXcoyZM/rFHi9MEL79kR7VWRo+EtSLh5Eg3bwVs8mz3KSoUZjvzjwQtPHtHNhA9nlMjt4OZpN7j1j+2VUooceXdi2PXuP+FmZZ33D8qrUu3OzqvzMBcH/sNOy3JDwspel8lRXpVZt/uT/jmrMou/bZRXZSbnPOVVmes8O8qrMh+Xy0R5VWa01lJe0TD8AmLg9jZ5k6cjAAAAAElFTkSuQmCC"/>
+                                        </g>
+                                      </g>
+                                      <g id="Grupo_219" data-name="Grupo 219" transform="translate(36.568 16.875)">
+                                        <g id="Grupo_218" data-name="Grupo 218" clip-path="url(#clip-path-6)">
+                                          <image id="Rectángulo_211" data-name="Rectángulo 211" width="3.211" height="50.73" transform="translate(-0.286 -0.116)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAACeCAYAAAALxZvoAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEkSURBVFhH7djBasMwEARQr91SYnro/39goVAKgVIINHZHZU5CzM7FCDt+sGgOK9mScoljhcEwckydjdLZKJ2N0tkodWyMX2CW4gbMUvwAsxTfwCzFFZil+AJmKT6BWYoPYJbiHZilcTGNd5PfyJVTu3g0J6QedDNovjtVVlycOtzxWDZYEdW8ibr8m0G3ZS/HYznWzaCaj6prm0dbet41qnkcdfU8Ho6pw23Gsk1j89zqOs9ROlbjuq6LU2XF1ald7JpjqhyPpfM7Nq+srrJi88rq2uYdLT1X5JjaxWY4ITXN83zB/+zydVjWdAFMGLL6b8SMVLwBszS9ALNkN8YrMEvTMzBLfuMTMEt+Y8Es+Y0jMEt+YwCz5DdyTPnf9sqvNzcMf5xmL+nbX5mLAAAAAElFTkSuQmCC"/>
+                                        </g>
+                                      </g>
+                                      <g id="Grupo_221" data-name="Grupo 221" transform="translate(49.554 33.742)">
+                                        <g id="Grupo_220" data-name="Grupo 220" clip-path="url(#clip-path-4)">
+                                          <image id="Rectángulo_213" data-name="Rectángulo 213" width="2.89" height="34.034" transform="translate(-0.108 -0.287)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAABqCAYAAABu8XvkAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFGSURBVFhH7ZdBisMwDEVtKw5J25kWeq+B3v8odux+QxZaKJIWQ1YRvMag7y9FNqWNf5/SgxFpf6pxiS7RJUJcotNFvW+bBUS1WqTWSrGAUykWcKrVwufUobRIrddiAacCtc6YE+rqjHLVYpQrFnDCVA18I0Bj4qFyvI3jNQ3G2cFSx9kTurfwOeFDPC/OuOOw1PGW27DQcV9f8Sg47hGICc7p9wkfFugJAzMYTvg20/HOCZYG3nLybs6445uFuycsdIYTmtP5Vyc5wRkiWOqMnqDWOb8neTfHLWoWNM/vdwgdf0uOSQF2FpTz6yXt5kD0fEoJDk3Tz6+U4ED0eEgJDtF0v0sJDk203qQEh4jWRUpwKKXFFOFHVmsWcMqztJsTiW54Oz0gWtZ9fRgUIcMTtsfEmHLGQo24O6mBcjHu68MwXUII4Qsqil4PJmsoqgAAAABJRU5ErkJggg=="/>
+                                        </g>
+                                      </g>
+                                      <g id="Grupo_223" data-name="Grupo 223" transform="translate(62.539 25.312)">
+                                        <g id="Grupo_222" data-name="Grupo 222" clip-path="url(#clip-path-5)">
+                                          <image id="Rectángulo_215" data-name="Rectángulo 215" width="3.211" height="42.382" transform="translate(-0.251 -0.206)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAACECAYAAACpiLoVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAF5SURBVFhH7ZdNboQwDIUJKTD8CTTt3Xuf3qD3aaAPKYsKLPt5Ec2ivOgjFnIc28kITfj8/torQnWeTd2Oqm5HVbejqn/quJOqKzwYEFF6fQU5YiLgcwQbQy2/vuKpWlp/xVUMJThuCG1zVE0NV44IbYOtkQOBY2v4M6NMe7DCpkDVcKZ0FJMYXO3BbHPkmBhKnAziMrj6SA1PMRs6b4McMRHwVeMhbnWmQHvgLF6CM3wf4U3JUbWY0ZXj55oY+JNBWGo42vNnlTYcOYrNuFIgovRSot5REUOJ20PKFVGs8swrz1p6KYGTSei8jSMingx8e+AsbnXG03BURVBga2m1hKePCYFtXMX8MLw2x4QcbFz3EStsHDkiAYZja2rwjtJtlojTunzgo2gqjsv8zLaqOMzzihnfO53YT+MCw1R8jMOcbVWx6/sp26pi23dDtlWFcV3e859yVbFpmk76C3omHMXkRapC++iGbKsKb03TZltVqGOM2VZUVb/dsODnK1SyDgAAAABJRU5ErkJggg=="/>
+                                        </g>
+                                      </g>
+                                      <g id="Grupo_225" data-name="Grupo 225" transform="translate(75.525 16.875)">
+                                        <g id="Grupo_224" data-name="Grupo 224" clip-path="url(#clip-path-6)">
+                                          <image id="Rectángulo_217" data-name="Rectángulo 217" width="2.89" height="50.73" transform="translate(-0.072 -0.116)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAACeCAYAAADg8iDrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEeSURBVFhH7ZjRbsMgDEUxJklbtf23/dR+ekqY2+XBsm4xDwglE5ZOgsD2tQlK1dD3108OjsX9XrThNJyGk9hw6u6U87Z5xBxk4FCZCUxaesttks7jmN2BSEvbwlePY+4TmLTUyW3i6XHIwlGkZcg1lQORlsrzJBeP8Vj+uxw6GpZT79PqceLuQKSltvAsgzIit0rKMgd99eCONP0fi2yYQ1M53LamqZwMHBrKoUNmOW93KNJy4sLBpKW3HPqrZnllgr8nmu7dgUhLw31C6S28pMcjhJxLiNP9jhY0dXIz324oWsMTX69oQSNOlwta0HCKy4IWNLRMz+f+ZeSjMcdpQtEajpQSWtBQehdeNuI4z/v4o9GfXNmIKDofhUL4BfM4vgg+t/gHAAAAAElFTkSuQmCC"/>
+                                        </g>
+                                      </g>
+                                      <g id="Grupo_227" data-name="Grupo 227" transform="translate(88.51 8.438)">
+                                        <g id="Grupo_226" data-name="Grupo 226" clip-path="url(#clip-path-10)">
+                                          <image id="Rectángulo_219" data-name="Rectángulo 219" width="2.89" height="59.078" transform="translate(-0.215 -0.027)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAC4CAYAAAAxB8bAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAElSURBVFhH7dlLa8NADARgy9tHSv//T+ytUEoolNA4HcEcfNhZ6WAct+gDsXMQ+4iXEBy7wRSYOQ5VUzVVE1RTNSWb7AeYJbsAs2TfwCzZFzBLdgZmyT6BWbIPYJbsHZileUlINdkbcFZpu+Xma8KGy3Ecqj1tuSf//RQ55Ok4DnnTNSo/3RLVUU8X8qbusdf1/z+CUDVV019uwtf0EpXPdIuqTneP04Vq48e8BVgztPdMHIe23Xj3UazLZ+o+inXdYeOhmmn3mVDdO7QuX657h9aVXi607elCey/Hcai9ALOUm+kEfFUh5ZqegVnKNT0Bs2SvwCy1R2CW2gMwS6kmf0/nf4AMq0G8nGOW2gzMUq7JgFlKvYVMzRSezOVeeuIKMyrT9As91oeipl/wyAAAAABJRU5ErkJggg=="/>
+                                        </g>
+                                      </g>
+                                      <g id="Grupo_229" data-name="Grupo 229" transform="translate(100.64)">
+                                        <g id="Grupo_228" data-name="Grupo 228" clip-path="url(#clip-path-11)">
+                                          <image id="Rectángulo_221" data-name="Rectángulo 221" width="2.89" height="67.747" transform="translate(-0.144 -0.258)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAADTCAYAAABTNDlZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAG1SURBVFhH7ZbhTsMwDITbZu1gMA0Gz4XE+z8KdOUiOsmEq30/qmqT4uljWXOxnWvK1n58fk1NEN387kYVVVEVIaqoiqoIUUVVVEWIexZN+HXoc5ONT0Ks2hP3xnKb5eBDRId8TcSqFvDVlpwJA598CqD1UcvxCYu4O9ZEARwnVws0C8i1f2i7Q9UwZJ8w8JF9Cl9qT3zCsqoFfMKSy10ixHIQR6iHDu8B8r3jjRg23x0cjVB9Qt2ANcuRLZeIjvPrf7jrTHDVR3acrrYgEx7SAGTid96SM2EHPpvvDn8i8oNwiVD/sfLVFq0nZl7J9hbw1Za7LjdGyI8UvV8WsfFpREofuRzdkWXF8zQ1I+r6INOIuj65pzFi1Z64NxbVJ74ji9z4GLF5T2RlST6ZaM5HPOPkNpTkntCcj2rB+B2hluPNWrIFOMc+2ilgPZRoPUGJgc/WIuZLycY9pWF4e2c/+S0Qnc9swpL6/uWVTVggOp3YhCXtdscjBvheWwaip2d88WHFMimlwwFqfFgGoodHNmFJXbcfMKC9XIGo7zGgGa60vz350XbdsJ/Hi9G2yDWPF6JpfgBxoR+Hh1EGMAAAAABJRU5ErkJggg=="/>
+                                        </g>
+                                      </g>
+                                    </g>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="header__menu">
+                            <ul class="header__menu-list">
+                                <li>
+                                    <a href="https://www.naicacapital.com/">Créditos</a>
+                                </li>
+                                <li>
+                                    <a href="{{ url_for('seguros') }}">Seguros</a>
+                                </li>
+                                <li>
+                                    <a href="{{ url_for('acreedores') }}">Acreedores</a>
+                                </li>
+                                <li>
+                                    <a href="https://banca.naica.mx/">Acceso</a>
+                                </li>
+                            </ul>
+                            <div class="header__menu-mobile">
+                                <button class="btn btn--menu" id="open_menu"></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <aside class="header__aside" id="menu_target">
+            <div class="container">
+                <div class="header__aside-container">
+                    <div class="header__aside-close">
+                        <button class="btn btn--close" id="close_menu"></button>
+                    </div>
+                    <nav class="heade__aside-nav">
+                        <ul class="header__aside-nav-list">
+                            <li>
+                                <a href="https://www.naicacapital.com/">Créditos</a>
+                            </li>
+                            <li>
+                                <a href="{{ url_for('seguros') }}">Seguros</a>
+                            </li>
+                            <li>
+                                <a href="{{ url_for('acreedores') }}">Acreedores</a>
+                            </li>
+                            <li>
+                                <a href="https://banca.naica.mx/">Acceso</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="header__aside-footer">
+                        <div class="footer__information">
+                            <p class="ttl txt-footer">¿Necesitas más información?</p>
+                            <div class="phones">
+                                <a href="tel:+8006242200" target="_blank" class="txt-footer-500">800 624 22 00</a>
+                                <a href="tel:+5545284007" target="_blank" class="txt-footer-500">55 4528 4007</a>
+                            </div>
+                            <div class="schedule">
+                                <p class="txt-footer">En horario de atención:</p>
+                                <p class="txt-footer">Lunes a viernes de 09:00am a 06:00pm</p>
+                                <p class="txt-footer">Av. Paseo de la Reforma 505 Piso 15, Cuauhtémoc, CDMX CP. 06500</p>
+                            </div>
+                            <div class="mail">
+                                <p class="txt-footer">O escribe a:</p>
+                                <a href="mailto:hola@naica.com" target="_blank" class="txt-footer-500">hola@naica.com</a>
+                            </div>
+                        </div>
+                        <div class="header__aside-footer-copy">
+                            <div class="social-media">
+                                <a href="https://www.facebook.com/naica.holding?mibextid=LQQJ4d&rdid=jw6sW3F7y4XkJBmB&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2Fw5UDpfgpgBY8sQmB%2F%3Fmibextid%3DLQQJ4d" target="_blank" rel="noopener noreferrer" class="social-media-link">
+                                    <img src="{{ url_for('static', filename='images/fb.png') }}" alt="Facebook" class="image" width="40" height="40">
+                                </a>
+                                <a href="https://wa.me/5215593377291" target="_blank" rel="noopener noreferrer" class="social-media-link">
+                                    <img src="{{ url_for('static', filename='images/wa_f.png') }}" alt="WhatsApp" class="image" width="40" height="40">
+                                </a>
+                                <a href="https://www.linkedin.com/company/naicatechnologies/" target="_blank" rel="noopener noreferrer" class="social-media-link">
+                                    <img src="{{ url_for('static', filename='images/in.png') }}" alt="LinkedIn" class="image" width="40" height="40">
+                                </a>
+                                <a href="https://www.instagram.com/gruponaica/profilecard/?igsh=MXhsbzdlNGRkNmJwNw%3D%3D" target="_blank" rel="noopener noreferrer" class="social-media-link">
+                                    <img src="{{ url_for('static', filename='images/ig.png') }}" alt="Instagram" class="image" width="40" height="40">
+                                </a>
+                            </div>
+                            <div class="legend txt-copy">
+                                <p>AV. PASEO DE LA REFORMA 505 PISO 15, CUAUHTÉMOC, CDMX CP. 06500</p>
+                                <p>Naica Capital SA de CV. SOFOM E.N.R.</p>
+                            </div>
+                            <div class="copy txt-copy-2">
+                                <p>© COPYRIGHT 2032</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <!--/END H e a d e r-->
+        <!-- H e r o -->
+        <section class="creditors__hero">
+            <div class="image-container">
+                <img src="{{ url_for('static', filename='images/hero_sc.webp') }}" alt="" class="image image--ratio image--cover image--desktop" width="1200" height="800">
+                <img src="{{ url_for('static', filename='images/hero_scm.webp') }}" alt="" class="image image--ratio image--cover image--mobile" width="600" height="800">
+            </div>
+            <div class="container">
+                <div class="creditors__hero-container">
+                    <div></div>
+                    <form action="" class="form__container" method="post" id="creditors_form">
+                        <h3 class="subtitle txt-25">Un representante se pondrá en contacto contigo</h3>
+                        <input type="text" name="name" id="name" placeholder="Nombre*" class="input" required>
+                        <input type="email" name="mail" id="mail" placeholder="Correo Electrónico*" class="input" required>
+                        <input type="tel" name="phone" id="phone" placeholder="Teléfono*" class="input" required>
+                        <button type="submit" id="btn_submit" class="btn btn--filled-purple">Quiero ser contactado</button>
+                        <label class="label" for="privacy">
+                            <input type="checkbox" name="privacy" id="privacy" class="checkbox">He leído y acepto el <a href="/assets/pdf/aviso_privacidad_naica_final.pdf" target="blank">aviso de privacidad</a>
+                        </label>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!--/END H e r o -->
+        <!-- A c e r c a -->
+        <section class="partners__about">
+            <div class="container">
+                <div class="partners__about-title">
+                    <h2 class="title ttl-50">MODELO DE NEGOCIO</h2>
+                </div>
+                <div class="partners__about-content">
+                    <div class="content txt-30">
+                        <p>¿Deseas formar parte de una red de negocios que contribuya al crecimiento de tu empresa? Únete a nuestros socios comerciales y accede a un programa diseñado para impulsar tu éxito.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--/END A c e r c a -->
+        <!-- T i p o s -->
+        <section class="partners__types">
+            <div class="container">
+                <div class="partners__types-grid">
+                    <div class="partners__types-block">
+                        <div class="image-container">
+                            <img src="{{ url_for('static', filename='images/partners_1.webp') }}" alt="" class="image--ratio image--cover" width="530" height="320">
+                        </div>
+                        <div class="data-container">
+                            <h3 class="title title--blue ttl-25">FACTURACIÓN</h3>
+                            <div class="content txt-25">
+                                <p>Optimiza tu estructura fiscal, emitiendo todas tus facturas de manera fácil y segura; aprovecha la opción de pagar tus servicios y operación en línea a través de nuestro sistema.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="partners__types-block">
+                        <div class="image-container">
+                            <img src="{{ url_for('static', filename='images/partners_2.webp') }}" alt="" class="image--ratio image--cover" width="530" height="320">
+                        </div>
+                        <div class="data-container">
+                            <h3 class="title title--purple ttl-25">CRÉDITOS</h3>
+                            <div class="content txt-25">
+                                <p>Accede a créditos personalizados que se adapten a tus necesidades y metas de negocio.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="partners__types-block">
+                        <div class="image-container">
+                            <img src="{{ url_for('static', filename='images/partners_3.webp') }}" alt="" class="image--ratio image--cover" width="530" height="320">
+                        </div>
+                        <div class="data-container">
+                            <h3 class="title title--aqua ttl-25">SOCIOS COMERCIALES</h3>
+                            <div class="content txt-25">
+                                <p>Intégrate al club de socios, donde podrás colaborar, generar nuevas líneas de negocio y lograr nuevos alcances con otros empresarios mexicanos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="partners__types-cta">
+                    <button class="btn btn--filled-blue contact_pop">Quiero ser socio</button>
+                </div>
+            </div>
+        </section>
+        <!--/END T i p o s -->
+        <!-- P r o p o s i t o -->
+        <section class="partners__tagline">
+            <div class="container">
+                <div class="ttl-50-2 partners__tagline-content">
+                    <p>QUEREMOS CREAR LA RED DE NEGOCIOS <strong>MÁS GRANDE DE MÉXICO</strong></p>
+                </div>
+            </div>
+        </section>
+        <!--/END P r o p o s i t o -->
+        <!-- C o n o c e -->
+        <section class="home__about">
+            <div class="container">
+                <div class="home__about-ttl">
+                    <div class="ttl ttl-50">
+                        <h2>¿POR QUÉ ELEGIR A <strong>NAICA</strong> <br>COMO TU ALIADO FINANCIERO?</h2>
+                    </div>
+                </div>
+                <div class="home__about-grid">
+                    <div class="home__about-block">
+                        <div class="image-container">
+                            <img src="{{ url_for('static', filename='images/about_1.webp') }}" alt="" class="image image--ratio image--cover" width="530" height="320">
+                        </div>
+                        <div class="data-container">
+                            <div class="txt-25">
+                                <p>Ayudamos a nuestros clientes a lograr sus metas financieras con estrategias personalizadas.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="home__about-block">
+                        <div class="image-container">
+                            <img src="{{ url_for('static', filename='images/about_2.webp') }}" alt="" class="image image--ratio image--cover" width="530" height="320">
+                        </div>
+                        <div class="data-container">
+                            <div class="txt-25">
+                                <p>Tenemos un equipo de expertos en finanzas que brindan asesoría especializada en diversas áreas.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="home__about-block">
+                        <div class="image-container">
+                            <img src="{{ url_for('static', filename='images/about_3.webp') }}" alt="" class="image image--ratio image--cover" width="530" height="320">
+                        </div>
+                        <div class="data-container">
+                            <div class="txt-25">
+                                <p>Moldeamos un futuro brillante para ti.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--/END C o n o c e -->
+        <!-- T a g l i n e -->
+        <section class="home__tagline home__tagline--blue">
+            <div class="container">
+                <div class="ttl-50-500 home__tagline-content">
+                    <p>OFRECEMOS UN SERVICIO AL CLIENTE DE CALIDAD PREMIUM Y UNA ESTRUCTURA EMPRESARIAL SÓLIDA Y CONFIABLE.</p>
+                </div>
+            </div>
+        </section>
+        <!--/END T a g l i n e -->
+        <!-- C l i e n t e s -->
+        <section class="home__clients">
+            <div class="container">
+                <div class="home__clients-grid">
+                    <div class="home__clients-reviews">
+                        <div class="home__clients-reviews-inner">
+                            <h3 class="ttl ttl-50">Nuestros clientes</h3>
+                            <div class="home__clients-reviews-slider" id="home_reviews">
+                                <div class="home__clients-reviews-slide">
+                                    <div class="content txt-30-2">
+                                        <p>"Muy buenos rendimientos da la empresa, mas de 18 años trabajando con mi asesora"</p>
+                                    </div>
+                                </div>
+                                <div class="home__clients-reviews-slide">
+                                    <div class="content txt-30-2">
+                                        <p>"Excelente servicio, la recepción es muy amable, el servicio es rápido y confiable."</p>
+                                    </div>
+                                </div>
+                                <div class="home__clients-reviews-slide">
+                                    <div class="content txt-30-2">
+                                        <p>"¡Por fin he visto crecer mis ahorros!"</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="content txt-30">
+                                <a href="https://www.google.com/search?q=naica+technologies&ie=UTF-8&oe=UTF-8&hl=es-mx&client=safari#lkt=LocalPoiReviews&lpg=cid:CgIgAQ%3D%3D&trex=m_t:lcl_akp,rc_f:rln,rc_ludocids:11768071240259590132,ru_gwp:0%252C7,ru_lqi:ChJuYWljYSB0ZWNobm9sb2dpZXNI5_SVvqKwgIAIWhoQABABGAAiEm5haWNhIHRlY2hub2xvZ2llc5IBFWZpbmFuY2lhbF9pbnN0aXR1dGlvbpoBI0NoWkRTVWhOTUc5blMwVkpRMEZuU1VOTU5Gb3piRnBCRUFFqgFMEAEqECIMdGVjaG5vbG9naWVzKA4yHhABIhqMcFsFti2BxtEr1KqkBvQE67oRzd5EMUHRszIWEAIiEm5haWNhIHRlY2hub2xvZ2llcw,trex_id:bZxVt" target="_blank" rel="noopener noreferrer">Ver todos los comentarios</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="home__clients-content">
+                        <h2 class="ttl ttl-50">CONOCE A NAICA</h2>
+                        <div class="content txt-30">
+                            <p>Naica, la empresa transnacional que ofrece soluciones financieras a tu medida. Naica se adapta a las necesidades específicas de cada cliente, y le ayuda a crecer y competir en el mercado.</p>
+                            <p>Naica cuenta con una amplia experiencia y presencia en diversos sectores y tamaños de empresas.</p>
+                            <p>Naica es tu aliado financiero ideal, que te brinda calidad, confianza y seguridad. ¡Contáctanos hoy y descubre todo lo que Naica puede hacer por ti!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--/END C l i e n t e s -->
+        <!-- M e n s a j e F i n a l -->
+        <section class="home__message">
+            <div class="container">
+                <div class="home__message-title home__message-title--blue">
+                    <h2 class="ttl ttl-50-2">¡NO ESPERES MÁS!</h2>
+                </div>
+                <div class="home__message-text">
+                    <div class="content txt-50">
+                        <p>Decídete hoy a impulsar y cambiar el rumbo de tus finanzas.</p>
+                    </div>
+                    <div class="button-container">
+                        <button class="btn btn--filled-blue contact_pop">Quiero ser cliente Naica</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--/END M e n s a j e F i n a l -->
+        <!-- P o p u p -->
+        <aside class="popup__contact" id="contact_pop_target">
+            <div class="popup__contact-inner">
+                <div class="popup__contact-container">
+                    <button class="popup__contact-close" id="contact_pop_close"></button>
+                    <form action="" class="form__columns" method="post" id="pop_form">
+                        <h3 class="title txt-20">Recibe información personalizada. Llena el formulario y te contactamos.</h3>
+                        <div class="form__columns-grid">
+                            <div class="form__columns-field">
+                                <input type="text" name="name" id="name" placeholder="Nombre*" class="input" required>
+                            </div>
+                            <div class="form__columns-field">
+                                <input type="tel" name="phone" id="phone" placeholder="Teléfono*" class="input" required>
+                            </div>
+                            <div class="form__columns-field">
+                                <input type="email" name="mail" id="mail" placeholder="Correo Electrónico*" class="input" required>
+                            </div>
+                        </div>
+                        <button type="submit" id="btn_submit" class="btn btn--filled-purple">Quiero ser contactado</button>
+                        <label class="label" for="privacy">
+                            <input type="checkbox" name="privacy" id="privacy" class="checkbox">He leído y acepto el &nbsp;<a href="/assets/pdf/aviso_privacidad_naica_final.pdf" target="blank">aviso de privacidad</a>
+                        </label>
+                    </form>
+                </div>
+            </div>
+        </aside>
+        <!--/END P o p u p -->
+        <!-- W h a t s A p p -->
+        <aside class="wa__container">
+            <a class="wa__button" href="https://wa.me/5215593377291" target="_blank" rel="noopener noreferrer">
+                <img src="{{ url_for('static', filename='images/wa.png') }}" alt="WhatsApp" class="image" width="150" height="150">
+            </a>
+        </aside>
+        <!--/END W h a t s A p p -->
+        <!-- F o o t e r -->
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__logo">
+                    <a href="/" class="footer__logo-link">
+                        <svg data-name="Grupo 210" xmlns="http://www.w3.org/2000/svg" width="280" height="67.488" viewBox="0 0 280 67.488">
+                            <defs>
+                              <clipPath id="clip-path">
+                                <rect id="Rectángulo_223" data-name="Rectángulo 223" width="280" height="67.488" fill="none"/>
+                              </clipPath>
+                              <clipPath id="clip-path-3">
+                                <rect id="Rectángulo_206" data-name="Rectángulo 206" width="2.665" height="25.309" fill="none"/>
+                              </clipPath>
+                              <clipPath id="clip-path-4">
+                                <rect id="Rectángulo_208" data-name="Rectángulo 208" width="2.665" height="33.747" fill="none"/>
+                              </clipPath>
+                              <clipPath id="clip-path-5">
+                                <rect id="Rectángulo_210" data-name="Rectángulo 210" width="2.665" height="42.176" fill="none"/>
+                              </clipPath>
+                              <clipPath id="clip-path-6">
+                                <rect id="Rectángulo_212" data-name="Rectángulo 212" width="2.665" height="50.614" fill="none"/>
+                              </clipPath>
+                              <clipPath id="clip-path-10">
+                                <rect id="Rectángulo_220" data-name="Rectángulo 220" width="2.665" height="59.051" fill="none"/>
+                              </clipPath>
+                              <clipPath id="clip-path-11">
+                                <rect id="Rectángulo_222" data-name="Rectángulo 222" width="2.665" height="67.488" fill="none"/>
+                              </clipPath>
+                            </defs>
+                            <g id="Grupo_230" data-name="Grupo 230" clip-path="url(#clip-path)">
+                              <path id="Trazado_170" data-name="Trazado 170" d="M408.438,78.841v25.388h-1.362l-15.21-16.913v16.912h-4.011V78.841h1.4l15.172,17.253V78.841Z" transform="translate(-263.325 -53.527)" fill="#fff"/>
+                              <path id="Trazado_171" data-name="Trazado 171" d="M517.1,100.066H505.862l-1.778,4.162h-4.275l11.01-25.387h1.362l11.01,25.387h-4.313Zm-5.6-13.772-4.2,10.329h8.361Z" transform="translate(-339.332 -53.527)" fill="#fff"/>
+                              <rect id="Rectángulo_203" data-name="Rectángulo 203" width="4.01" height="25.387" transform="translate(199.182 25.314)" fill="#fff"/>
+                              <g id="Grupo_211" data-name="Grupo 211">
+                                <g id="Grupo_210-2" data-name="Grupo 210" clip-path="url(#clip-path)">
+                                  <path id="Trazado_172" data-name="Trazado 172" d="M696.175,78.838a12.385,12.385,0,0,1,10.707,5.751l-3.027,2.232a8.742,8.742,0,0,0-7.643-4.313,9.235,9.235,0,0,0,0,18.464,8.742,8.742,0,0,0,7.643-4.313l3.027,2.232a12.246,12.246,0,0,1-10.707,5.751,12.9,12.9,0,1,1,0-25.8" transform="translate(-463.735 -53.524)" fill="#fff"/>
+                                  <path id="Trazado_173" data-name="Trazado 173" d="M816.536,100.066H805.3l-1.778,4.162h-4.275l11.01-25.387h1.362l11.01,25.387h-4.313Zm-5.6-13.772-4.2,10.329H815.1Z" transform="translate(-542.627 -53.527)" fill="#fff"/>
+                                </g>
+                              </g>
+                              <g id="Grupo_213" data-name="Grupo 213" transform="translate(0 42.179)">
+                                <g id="Grupo_212" data-name="Grupo 212" clip-path="url(#clip-path-3)">
+                                  <image id="Rectángulo_205" data-name="Rectángulo 205" width="2.89" height="25.365" transform="translate(0 -0.056)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAABPCAYAAAA5kO9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAELSURBVEhL7ZXZisMwDEW9ZOka2nSGftf8VH/art1r8IMJsqSHMk8RHKKALF/LN8S+/kI2Qrj6ZGMv2ov2IoSuKJucJVxKMUq4lEOQcO8Ug0TpFCXQKaCaB50gTgCngzgB984QJ6DuFCW0I8C+ArproYRuUQrHnhLoFFDN891rgUV5iiZU85TToZqnmA5T5dHaF+IEtCOgxbborEIJ3aIeQZT4706wAmm0Fq190VLgu51w0zxlBPAMj3YE9Pff4q/z85lzShz+PP/8ZoMXBn+aHiu1usUfptudWt3iD8OyUKtb/DycL9TqFnvB6epftBv2NK1rzbth5+G61LwbdvTHY827YZ0dx5p3wpgPdbK/5L3lj/AAAAAASUVORK5CYII="/>
+                                </g>
+                              </g>
+                              <g id="Grupo_215" data-name="Grupo 215" transform="translate(11.011 33.742)">
+                                <g id="Grupo_214" data-name="Grupo 214" clip-path="url(#clip-path-4)">
+                                  <image id="Rectángulo_207" data-name="Rectángulo 207" width="2.89" height="34.034" transform="translate(-0.095 -0.287)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAABqCAYAAABu8XvkAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEhSURBVFhH7ZfhasMwDIRlu0na0W7taF+rsPd/lKXxLiwBUc6WfgyPQgQfUaKzfLGTQML96zuLEXE5VmMTbaJNhHhdUc6Ph8U/iEYLb6cRSZ32nnhB4zZOfWj+1BMvaGbjmLdOe0+8oJlFMFcHIr4VmpgntDSIWZAYzJ1GC+/dcbOaKFBa+KabsFgWvk7MwzPObcGcFj5P7OIzXhF/QzTtPfG10Xg78a3QtPfEC5pXNs4LGoj4g6Zp74mvjQafQyy9QWPjaRhuN5E81Uh9f70iwU9XGYgunyITTsqkrjtf2GgNRB/vSKiXlbTbnU5IaIcViI5HVtCklA5vzKwGov0eauplJcU4DEgwogxEXccKmvDrqR4hxr5f8mKEgF5LXgiRH0Onhuntzv53AAAAAElFTkSuQmCC"/>
+                                </g>
+                              </g>
+                              <g id="Grupo_217" data-name="Grupo 217" transform="translate(23.789 25.312)">
+                                <g id="Grupo_216" data-name="Grupo 216" clip-path="url(#clip-path-5)">
+                                  <image id="Rectángulo_209" data-name="Rectángulo 209" width="2.89" height="42.382" transform="translate(-0.03 -0.206)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAACECAYAAABCvwEWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAE8SURBVFhH7ZZhasMwDIXjeG0Sp6bpSs++++wGu09t7xk0CMGW9MMEBn7iw/rxIsnGCTFfP99pEDTSyqqbuqmboG7qpm6Cuul0U4wxSIwpxCCBSgFunhEFxYApvCV0g8OJgjx5JpTkye1EKQdHVym0h1lusUfXLsEqoR0ci0AeHF6e3A474Dn90u2eqAUOE2+EgPII4JRoODiqoSRP03ZYBJTnhEWKvLu3hLJSYYYjeXcoyZM/rFHi9MEL79kR7VWRo+EtSLh5Eg3bwVs8mz3KSoUZjvzjwQtPHtHNhA9nlMjt4OZpN7j1j+2VUooceXdi2PXuP+FmZZ33D8qrUu3OzqvzMBcH/sNOy3JDwspel8lRXpVZt/uT/jmrMou/bZRXZSbnPOVVmes8O8qrMh+Xy0R5VWa01lJe0TD8AmLg9jZ5k6cjAAAAAElFTkSuQmCC"/>
+                                </g>
+                              </g>
+                              <g id="Grupo_219" data-name="Grupo 219" transform="translate(36.568 16.875)">
+                                <g id="Grupo_218" data-name="Grupo 218" clip-path="url(#clip-path-6)">
+                                  <image id="Rectángulo_211" data-name="Rectángulo 211" width="3.211" height="50.73" transform="translate(-0.286 -0.116)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAACeCAYAAAALxZvoAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEkSURBVFhH7djBasMwEARQr91SYnro/39goVAKgVIINHZHZU5CzM7FCDt+sGgOK9mScoljhcEwckydjdLZKJ2N0tkodWyMX2CW4gbMUvwAsxTfwCzFFZil+AJmKT6BWYoPYJbiHZilcTGNd5PfyJVTu3g0J6QedDNovjtVVlycOtzxWDZYEdW8ibr8m0G3ZS/HYznWzaCaj6prm0dbet41qnkcdfU8Ho6pw23Gsk1j89zqOs9ROlbjuq6LU2XF1ald7JpjqhyPpfM7Nq+srrJi88rq2uYdLT1X5JjaxWY4ITXN83zB/+zydVjWdAFMGLL6b8SMVLwBszS9ALNkN8YrMEvTMzBLfuMTMEt+Y8Es+Y0jMEt+YwCz5DdyTPnf9sqvNzcMf5xmL+nbX5mLAAAAAElFTkSuQmCC"/>
+                                </g>
+                              </g>
+                              <g id="Grupo_221" data-name="Grupo 221" transform="translate(49.554 33.742)">
+                                <g id="Grupo_220" data-name="Grupo 220" clip-path="url(#clip-path-4)">
+                                  <image id="Rectángulo_213" data-name="Rectángulo 213" width="2.89" height="34.034" transform="translate(-0.108 -0.287)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAABqCAYAAABu8XvkAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAFGSURBVFhH7ZdBisMwDEVtKw5J25kWeq+B3v8odux+QxZaKJIWQ1YRvMag7y9FNqWNf5/SgxFpf6pxiS7RJUJcotNFvW+bBUS1WqTWSrGAUykWcKrVwufUobRIrddiAacCtc6YE+rqjHLVYpQrFnDCVA18I0Bj4qFyvI3jNQ3G2cFSx9kTurfwOeFDPC/OuOOw1PGW27DQcV9f8Sg47hGICc7p9wkfFugJAzMYTvg20/HOCZYG3nLybs6445uFuycsdIYTmtP5Vyc5wRkiWOqMnqDWOb8neTfHLWoWNM/vdwgdf0uOSQF2FpTz6yXt5kD0fEoJDk3Tz6+U4ED0eEgJDtF0v0sJDk203qQEh4jWRUpwKKXFFOFHVmsWcMqztJsTiW54Oz0gWtZ9fRgUIcMTtsfEmHLGQo24O6mBcjHu68MwXUII4Qsqil4PJmsoqgAAAABJRU5ErkJggg=="/>
+                                </g>
+                              </g>
+                              <g id="Grupo_223" data-name="Grupo 223" transform="translate(62.539 25.312)">
+                                <g id="Grupo_222" data-name="Grupo 222" clip-path="url(#clip-path-5)">
+                                  <image id="Rectángulo_215" data-name="Rectángulo 215" width="3.211" height="42.382" transform="translate(-0.251 -0.206)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAACECAYAAACpiLoVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAF5SURBVFhH7ZdNboQwDIUJKTD8CTTt3Xuf3qD3aaAPKYsKLPt5Ec2ivOgjFnIc28kITfj8/torQnWeTd2Oqm5HVbejqn/quJOqKzwYEFF6fQU5YiLgcwQbQy2/vuKpWlp/xVUMJThuCG1zVE0NV44IbYOtkQOBY2v4M6NMe7DCpkDVcKZ0FJMYXO3BbHPkmBhKnAziMrj6SA1PMRs6b4McMRHwVeMhbnWmQHvgLF6CM3wf4U3JUbWY0ZXj55oY+JNBWGo42vNnlTYcOYrNuFIgovRSot5REUOJ20PKFVGs8swrz1p6KYGTSei8jSMingx8e+AsbnXG03BURVBga2m1hKePCYFtXMX8MLw2x4QcbFz3EStsHDkiAYZja2rwjtJtlojTunzgo2gqjsv8zLaqOMzzihnfO53YT+MCw1R8jMOcbVWx6/sp26pi23dDtlWFcV3e859yVbFpmk76C3omHMXkRapC++iGbKsKb03TZltVqGOM2VZUVb/dsODnK1SyDgAAAABJRU5ErkJggg=="/>
+                                </g>
+                              </g>
+                              <g id="Grupo_225" data-name="Grupo 225" transform="translate(75.525 16.875)">
+                                <g id="Grupo_224" data-name="Grupo 224" clip-path="url(#clip-path-6)">
+                                  <image id="Rectángulo_217" data-name="Rectángulo 217" width="2.89" height="50.73" transform="translate(-0.072 -0.116)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAACeCAYAAADg8iDrAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEeSURBVFhH7ZjRbsMgDEUxJklbtf23/dR+ekqY2+XBsm4xDwglE5ZOgsD2tQlK1dD3108OjsX9XrThNJyGk9hw6u6U87Z5xBxk4FCZCUxaesttks7jmN2BSEvbwlePY+4TmLTUyW3i6XHIwlGkZcg1lQORlsrzJBeP8Vj+uxw6GpZT79PqceLuQKSltvAsgzIit0rKMgd99eCONP0fi2yYQ1M53LamqZwMHBrKoUNmOW93KNJy4sLBpKW3HPqrZnllgr8nmu7dgUhLw31C6S28pMcjhJxLiNP9jhY0dXIz324oWsMTX69oQSNOlwta0HCKy4IWNLRMz+f+ZeSjMcdpQtEajpQSWtBQehdeNuI4z/v4o9GfXNmIKDofhUL4BfM4vgg+t/gHAAAAAElFTkSuQmCC"/>
+                                </g>
+                              </g>
+                              <g id="Grupo_227" data-name="Grupo 227" transform="translate(88.51 8.438)">
+                                <g id="Grupo_226" data-name="Grupo 226" clip-path="url(#clip-path-10)">
+                                  <image id="Rectángulo_219" data-name="Rectángulo 219" width="2.89" height="59.078" transform="translate(-0.215 -0.027)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAC4CAYAAAAxB8bAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAElSURBVFhH7dlLa8NADARgy9tHSv//T+ytUEoolNA4HcEcfNhZ6WAct+gDsXMQ+4iXEBy7wRSYOQ5VUzVVE1RTNSWb7AeYJbsAs2TfwCzZFzBLdgZmyT6BWbIPYJbsHZileUlINdkbcFZpu+Xma8KGy3Ecqj1tuSf//RQ55Ok4DnnTNSo/3RLVUU8X8qbusdf1/z+CUDVV019uwtf0EpXPdIuqTneP04Vq48e8BVgztPdMHIe23Xj3UazLZ+o+inXdYeOhmmn3mVDdO7QuX657h9aVXi607elCey/Hcai9ALOUm+kEfFUh5ZqegVnKNT0Bs2SvwCy1R2CW2gMwS6kmf0/nf4AMq0G8nGOW2gzMUq7JgFlKvYVMzRSezOVeeuIKMyrT9As91oeipl/wyAAAAABJRU5ErkJggg=="/>
+                                </g>
+                              </g>
+                              <g id="Grupo_229" data-name="Grupo 229" transform="translate(100.64)">
+                                <g id="Grupo_228" data-name="Grupo 228" clip-path="url(#clip-path-11)">
+                                  <image id="Rectángulo_221" data-name="Rectángulo 221" width="2.89" height="67.747" transform="translate(-0.144 -0.258)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAADTCAYAAABTNDlZAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAG1SURBVFhH7ZbhTsMwDITbZu1gMA0Gz4XE+z8KdOUiOsmEq30/qmqT4uljWXOxnWvK1n58fk1NEN387kYVVVEVIaqoiqoIUUVVVEWIexZN+HXoc5ONT0Ks2hP3xnKb5eBDRId8TcSqFvDVlpwJA598CqD1UcvxCYu4O9ZEARwnVws0C8i1f2i7Q9UwZJ8w8JF9Cl9qT3zCsqoFfMKSy10ixHIQR6iHDu8B8r3jjRg23x0cjVB9Qt2ANcuRLZeIjvPrf7jrTHDVR3acrrYgEx7SAGTid96SM2EHPpvvDn8i8oNwiVD/sfLVFq0nZl7J9hbw1Za7LjdGyI8UvV8WsfFpREofuRzdkWXF8zQ1I+r6INOIuj65pzFi1Z64NxbVJ74ji9z4GLF5T2RlST6ZaM5HPOPkNpTkntCcj2rB+B2hluPNWrIFOMc+2ilgPZRoPUGJgc/WIuZLycY9pWF4e2c/+S0Qnc9swpL6/uWVTVggOp3YhCXtdscjBvheWwaip2d88WHFMimlwwFqfFgGoodHNmFJXbcfMKC9XIGo7zGgGa60vz350XbdsJ/Hi9G2yDWPF6JpfgBxoR+Hh1EGMAAAAABJRU5ErkJggg=="/>
+                                </g>
+                              </g>
+                            </g>
+                        </svg>
+                    </a>
+                </div>
+                <div class="footer__grid">
+                    <div class="footer__information">
+                        <p class="ttl txt-footer">¿Necesitas más información?</p>
+                        <div class="phones">
+                            <a href="tel:+8006242200" target="_blank" class="txt-footer-500">800 624 22 00</a>
+                            <a href="tel:+5545284007" target="_blank" class="txt-footer-500">55 4528 4007</a>
+                        </div>
+                        <div class="schedule">
+                            <p class="txt-footer">En horario de atención:</p>
+                            <p class="txt-footer">Lunes a viernes de 09:00am a 06:00pm</p>
+                        </div>
+                        <div class="mail">
+                            <p class="txt-footer">O escribe a:</p>
+                            <a href="mailto:hola@naica.com" target="_blank" class="txt-footer-500">hola@naica.com</a>
+                        </div>
+                    </div>
+                    <div class="footer__menu">
+                        <nav class="footer__menu-nav">
+                            <p class="ttl txt-footer">Sobre Naica</p>
+                            <ul class="footer__menu-nav-list">
+                                <li><a href="https://www.naicacapital.com/">Créditos</a></li>
+                                <li><a href="{{ url_for('seguros') }}">Seguros</a></li>
+                                <li><a href="{{ url_for('acreedores') }}">Acreedores</a></li>
+                                <li><a href="http://banca.naica.mx/">Acceso</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="footer__partners">
+                        <p class="ttl txt-footer">Afiliaciones</p>
+                        <div class="footer__partners-logos">
+                            <a href="https://webapps.condusef.gob.mx/SIPRES/jsp/pub/index.jsp" target="_blank" class="logo">
+                                <img src="{{ url_for('static', filename='images/cnbv_2.png') }}" alt="CNBV" class="image image--h">
+                            </a>
+                            <a href="https://www.cnbv.gob.mx/Paginas/BusquedaEntidades.aspx" target="_blank" class="logo">
+                                <img src="{{ url_for('static', filename='images/condusef_2.png') }}" alt="Condusef" class="image image--h">
+                            </a>
+                            <a href="https://www.burodecredito.com.mx/?utm_source=Google&utm_medium=PaidSearch&utm_campaign=Home_ing&gad_source=1&gbraid=0AAAAAo-qI_TH4gSsZm6PV3ITU7E-W61HD&gclid=CjwKCAjwreW2BhBhEiwAavLwfComP5OhnBilPuouUNQD_kny37dApI14t7XCvZ9BdM9hJfBwv0ms4RoCeUIQAvD_BwE" target="_blank" class="logo">
+                                <img src="{{ url_for('static', filename='images/buro_2.png') }}" alt="Buró de Entidades Financieras" class="image image--h">
+                            </a>
+                            <div class="logo logo--lgbt">
+                                <img src="{{ url_for('static', filename='images/logo_footer.png') }}" alt="" class="image image--h">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="footer__social">
+                        <div class="social-media">
+                            <a href="https://www.facebook.com/naica.holding?mibextid=LQQJ4d&rdid=jw6sW3F7y4XkJBmB&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2Fw5UDpfgpgBY8sQmB%2F%3Fmibextid%3DLQQJ4d" target="_blank" rel="noopener noreferrer" class="social-media-link">
+                                <img src="{{ url_for('static', filename='images/fb.png') }}" alt="Facebook" class="image" width="40" height="40">
+                            </a>
+                            <a href="https://wa.me/5215593377291" target="_blank" rel="noopener noreferrer" class="social-media-link">
+                                <img src="{{ url_for('static', filename='images/wa_f.png') }}" alt="WhatsApp" class="image" width="40" height="40">
+                            </a>
+                            <a href="https://www.linkedin.com/company/naicatechnologies/" target="_blank" rel="noopener noreferrer" class="social-media-link">
+                                <img src="{{ url_for('static', filename='images/in.png') }}" alt="LinkedIn" class="image" width="40" height="40">
+                            </a>
+                            <a href="https://www.instagram.com/gruponaica/profilecard/?igsh=MXhsbzdlNGRkNmJwNw%3D%3D" target="_blank" rel="noopener noreferrer" class="social-media-link">
+                                <img src="{{ url_for('static', filename='images/ig.png') }}" alt="Instagram" class="image" width="40" height="40">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="footer__copy">
+                        <div class="copy txt-copy-2">
+                            <p>© COPYRIGHT 2032</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!--/END F o o t e r -->
+    </main>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo="
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.2/dist/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/additional-methods.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/micorriza-dist.js') }}"></script>
+</body>
+</html>

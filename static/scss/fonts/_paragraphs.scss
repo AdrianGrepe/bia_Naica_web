@@ -1,0 +1,121 @@
+%wysiwyg{
+    strong, b{
+        @extend %montserrat-bold;
+        font-weight: 500;
+    }
+
+    p:not(:last-child){
+        margin: 0 0 1em;
+    }
+}
+
+.txt-menu{
+    @extend %montserrat-bold;
+    @include responsive-font(17px, 25px, 20px, 30px);
+}
+
+.txt-footer{
+    @extend %montserrat-light;
+    @include responsive-font(17px, 25px, 20px, 30px);
+}
+
+.txt-footer-500{
+    @extend %montserrat-bold;
+    @include responsive-font(17px, 25px, 20px, 30px);
+}
+
+.txt-copy{
+    @extend %montserrat-light;
+    @include responsive-font(15px, 18px, 19px, 22px);
+    @include under(mobile){
+        font-size: 10px;
+        line-height: 15px;
+    }
+}
+
+.txt-copy-2{
+    @extend %montserrat-light;
+    @include responsive-font(15px, 18px, 19px, 22px);
+    letter-spacing: 2px;
+    @include under(mobile){
+        font-size: 10px;
+        line-height: 15px;
+    }
+}
+
+.txt-btn{
+    @extend %montserrat-regular;
+    @include responsive-font(17px, 30px, 24px, 37px);
+}
+
+.txt-input{
+    @extend %montserrat-light;
+    @include responsive-font(14px, 20px, 18px, 24px);
+}
+
+.txt-input-2{
+    @extend %montserrat-light;
+    @include responsive-font(12px, 18px, 15px, 22px);
+
+    a{
+        text-decoration: underline;
+    }
+}
+
+.txt-50{
+    @extend %montserrat-regular;
+    @include responsive-font(28px, 50px, 34px, 61px);
+    @extend %wysiwyg;
+}
+
+.txt-40{
+    @extend %montserrat-regular;
+    @include responsive-font(25px, 40px, 30px, 49px);
+    @extend %wysiwyg;
+}
+
+.txt-40-500{
+    @extend %montserrat-medium;
+    @include responsive-font(25px, 40px, 30px, 49px);
+    @extend %wysiwyg;
+}
+
+.txt-30{
+    @extend %montserrat-regular;
+    @include responsive-font(20px, 30px, 33px, 45px);
+    @extend %wysiwyg;
+}
+
+.txt-30-2{
+    @extend %montserrat-regular;
+    @include responsive-font(20px, 30px, 33px, 45px);
+    letter-spacing: 1px;
+    @extend %wysiwyg;
+}
+
+.txt-32{
+    @extend %montserrat-regular;
+    @include responsive-font(20px, 32px, 27px, 39px);
+    @extend %wysiwyg;
+}
+.txt-25{
+    @extend %montserrat-regular;
+    @extend %wysiwyg;
+    @include responsive-font(17px, 25px, 25px, 35px);
+}
+.txt-25-600{
+    @extend %montserrat-bold;
+    @extend %wysiwyg;
+    @include responsive-font(17px, 25px, 25px, 35px);
+}
+
+.txt-20-300{
+    @extend %montserrat-light;
+    @extend %wysiwyg;
+    @include responsive-font(14px, 20px, 18px, 24px);
+}
+.txt-20-500{
+    @extend %montserrat-medium;
+    @extend %wysiwyg;
+    @include responsive-font(14px, 20px, 18px, 24px);
+}

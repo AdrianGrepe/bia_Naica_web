@@ -1,0 +1,35 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+blinker = "==1.4"
+click = "==7.1.2"
+dnspython = "==2.1.0"
+email-validator = "==1.1.2"
+flask = "==1.1.2"
+flask-email = "==1.4.4"
+flask-mail = "==0.9.1"
+flask-sqlalchemy = "==2.5.1"
+flask-wtf = "==0.14.3"
+greenlet = "==1.0.0"
+idna = "==3.1"
+itsdangerous = "==1.1.0"
+jinja2 = "==2.11.3"
+markupsafe = "==1.1.1"
+numpy = "==1.20.2"
+pandas = "==1.2.4"
+pipfile = "==0.0.2"
+python-dateutil = "==2.8.1"
+pytz = "==2021.1"
+six = "==1.15.0"
+sqlalchemy = "==1.4.9"
+toml = "==0.10.2"
+werkzeug = "==1.0.1"
+wtforms = "==2.3.3"
+
+[dev-packages]
+
+[requires]
+python_version = "3.9"

@@ -1,0 +1,25 @@
+.partners{
+
+    &__tagline{
+        width: 100%;
+        background-image: url('/static/images/bg_tagline.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 150px 0;
+        box-sizing: border-box;
+
+        &-content{
+            width: 70%;
+            margin: 0 auto;
+            color: c(white);
+            text-transform: uppercase;
+            text-align: center;
+            strong{
+                color: c(purple);
+            }
+            @include under(mobile){
+                width: 90%;
+            }
+        }
+    }
+}

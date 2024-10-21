@@ -1,0 +1,64 @@
+body{
+    @extend %montserrat-regular;
+    font-size: 17px;
+}
+
+h1, h2, h3, h4, h5, h6{
+    font-weight: 600;
+}
+
+.dots{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 100px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 20px;
+    z-index: 3;
+
+    li button{
+        font-size: 0;
+        width: 20px;
+        height: 20px;
+        border: 1px solid c(white);
+        background-color: transparent;
+        cursor: pointer;
+        border-radius: 100%;
+    }
+
+    li.slick-active button{
+        background-color: c(white);
+    }
+
+    @include under(mobile){
+        bottom: 50px;
+    }
+
+    &--reviews{
+        bottom: 0;
+    }
+}
+
+br{
+    @include under(sm){
+        display: none;
+    }
+}
+
+.bg-black{
+    background-color: c(black);
+}
+
+.underline{
+    text-decoration: underline;
+    text-underline-offset: .07em;
+    text-decoration-thickness: 1px;
+}
+
+.pointer{
+    cursor: pointer;
+}

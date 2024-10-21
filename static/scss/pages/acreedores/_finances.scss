@@ -1,0 +1,113 @@
+.creditors{
+
+    &__finances{
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0 0 100px;
+
+        &-title{
+            width: 90%;
+            margin: 0 auto 40px;
+
+            .title{
+                color: c(gray);
+                text-transform: uppercase;
+                text-align: center;
+                strong{
+                    color: c(purple);
+                }
+            }
+        }
+
+        &-grid{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-content: center;
+            align-items: stretch;
+            column-gap: 10px;
+            position: relative;
+
+            @include under(sm){
+                display: block;
+
+                .slick-track{
+                    display: flex !important;
+                    align-items: stretch; 
+                }
+
+                .slick-slide {
+                    height: auto !important;
+                    flex: 1;
+                    margin-right: 10px;
+
+                    & > .creditors__finances-grid-block{
+                        height: 100%;
+                    }
+                }
+    
+                .slick-list {
+                    margin-right: -10px;
+                }
+            }
+
+            &-block{
+                width: calc((100% - 20px) / 3);
+                &-inner{
+                    width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    align-items: stretch;
+                    align-content: space-between;
+                    row-gap: 40px;
+                }
+                @include under(sm){
+                    width: 100%;
+                }
+            }
+        }
+
+        &-block{
+            width: 100%;
+            position: relative;
+
+            .image-container{
+                width: 100%;
+                padding-top: calc( 320 / 540 * 100%);
+                z-index: 1;
+                top: 0;
+                left: 0;
+            }
+
+            .data-container{
+                box-sizing: border-box;
+                width: 50%;
+                padding: 20px;
+                height: 100%;
+                position: absolute;
+                z-index: 2;
+                top: 0;
+                left: 0;
+                color: c(white);
+                text-align: center;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                &--blue{
+                    background-color: rgba($color: #4B50FF, $alpha: .8);
+                }
+
+                &--purple{
+                    background-color: rgba($color: #9650FF, $alpha: .8);
+                }
+
+                &--aqua{
+                    background-color: rgba($color: #78D2C3, $alpha: 1.0);
+                }
+            }
+        }
+    }
+}

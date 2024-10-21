@@ -1,0 +1,44 @@
+.home{
+
+    &__message{
+        padding: 100px 0;
+        box-sizing: border-box;
+
+        &-title{
+            width: 90%;
+            margin: 0 auto 10px;
+
+            .ttl{
+                text-transform: uppercase;
+                color: c(purple);
+                text-align: center;
+            }
+            @include under(mobile){
+                width: 100%;
+            }
+
+            &--blue{
+                .ttl{
+                    color: c(blue);
+                }
+            }
+        }
+
+        &-text{
+            width: 100%;
+            margin: 0 auto;
+
+            .content{
+                color: c(gray);
+                text-align: center;
+            }
+
+            .button-container{
+                width: 100%;
+                margin: 50px 0 0;
+                display: flex;
+                justify-content: center;
+            }
+        }
+    }
+}

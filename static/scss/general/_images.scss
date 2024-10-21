@@ -1,0 +1,43 @@
+.image{
+    width: 100%;
+    height: auto;
+
+    &--ratio{
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    &--cover{
+        object-fit: cover;
+    }
+
+    &--contain{
+        object-fit: contain;
+    }
+
+    &--h{
+        width: auto;
+        height: 100%;
+    }
+
+    &--desktop{
+        @include under(sm){
+            display: none !important;
+        }
+    }
+
+    &--mobile{
+        display: none !important;
+        @include under(sm){
+            display: block !important;
+        }
+    }
+}
+
+.image-container{
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+}

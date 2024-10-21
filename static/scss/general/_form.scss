@@ -1,0 +1,134 @@
+.form{
+
+    &__container{
+        width: 100%;
+        color: c(white);
+        border-radius: 20px;
+        box-sizing: border-box;
+        padding: 25px 40px;
+        background: linear-gradient(
+              to bottom,
+              hsl(238.31, 100%, 65.1%) 0%,
+              hsl(238.31, 82.52%, 60.62%) 5.9%,
+              hsl(238.31, 68.67%, 56.15%) 10.9%,
+              hsl(238.31, 57.42%, 51.71%) 15.3%,
+              hsl(238.31, 53.61%, 47.29%) 19.3%,
+              hsl(238.31, 53.61%, 42.89%) 23%,
+              hsl(238.31, 53.61%, 38.51%) 26.8%,
+              hsl(238.31, 53.61%, 34.15%) 30.9%,
+              hsl(238.31, 53.61%, 29.81%) 35.5%,
+              hsl(238.31, 53.61%, 25.49%) 40.8%,
+              hsl(238.31, 53.61%, 21.19%) 47%,
+              hsl(238.31, 53.61%, 16.91%) 54.3%,
+              hsl(238.31, 53.61%, 12.65%) 63.1%,
+              hsl(238.31, 53.61%, 8.41%) 73.5%,
+              hsl(238.31, 53.61%, 4.2%) 85.7%,
+              hsl(0, 0%, 0%) 100%
+            );
+
+        &--purple{
+            background: linear-gradient(
+                  to bottom,
+                  hsl(263.93, 100%, 66.08%) 0%,
+                  hsl(263.93, 82.1%, 61.53%) 5.9%,
+                  hsl(263.93, 68.05%, 57%) 10.9%,
+                  hsl(263.93, 56.72%, 52.49%) 15.3%,
+                  hsl(263.93, 51.34%, 48%) 19.3%,
+                  hsl(263.93, 51.34%, 43.54%) 23%,
+                  hsl(263.93, 51.34%, 39.09%) 26.8%,
+                  hsl(263.93, 51.34%, 34.66%) 30.9%,
+                  hsl(263.93, 51.34%, 30.26%) 35.5%,
+                  hsl(263.93, 51.34%, 25.87%) 40.8%,
+                  hsl(263.93, 51.34%, 21.51%) 47%,
+                  hsl(263.93, 51.34%, 17.16%) 54.3%,
+                  hsl(263.93, 51.34%, 12.84%) 63.1%,
+                  hsl(263.93, 51.34%, 8.54%) 73.5%,
+                  hsl(263.93, 51.34%, 4.26%) 85.7%,
+                  hsl(0, 0%, 0%) 100%
+                );
+        }
+        .input:not(:last-child){
+            margin: 0 0 20px;
+            width: 100%;
+        }
+        .btn{
+            margin: 25px 0 20px;
+            padding: 0.7em;
+            width: 100%;
+        }
+
+        .label .checkbox{
+            margin-right: .8em;
+        }
+
+        .label{
+            position: relative;
+
+            p.error-form{
+                position: absolute;
+                bottom: -2.5em;
+                font-size: 10px !important;
+                margin-left: 2.8em;
+            }
+        }
+    }
+
+    &__columns{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+
+        &-grid{
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 30px;
+            row-gap: 30px;
+            @include under(mobile){
+                grid-template-columns: 1fr;
+            }
+        }
+
+        &-field{
+            width: 100%;
+            .error-form{
+                margin: 10px 0 0;
+            }
+            .input{
+                width: 100%;
+            }
+        }
+
+        .title{
+            margin: 0 0 30px;
+            font-weight: 300;
+        }
+
+        .btn{
+            margin: 40px auto 40px;
+            padding: 0.7em;
+            width: 100%;
+            max-width: 384px;
+        }
+
+        .label{
+            display: inline-flex;
+            margin: 0 auto;
+        }
+
+        .label .checkbox{
+            margin-right: .8em;
+        }
+
+        .label{
+            position: relative;
+
+            p.error-form{
+                position: absolute;
+                bottom: -1.5em;
+                font-size: 10px !important;
+                margin-left: 2.8em;
+            }
+        }
+    }
+}

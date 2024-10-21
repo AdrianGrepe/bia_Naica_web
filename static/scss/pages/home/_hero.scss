@@ -1,0 +1,115 @@
+.home{
+
+    &__hero{
+        width: 100%;
+        &-slider{
+            width: 100%;
+            position: relative;
+            background-color: c(black);
+            & > div:not(:first-child){
+                opacity: 0;
+                height: 1px;
+                visibility: hidden;
+                transition: opacity 1s ease;
+                -webkit-transition: opacity 1s ease;
+            }
+            
+            &.slick-initialized > div:not(:first-child) {
+                visibility: visible;
+                opacity: 1; 
+                height: auto;
+            } 
+
+            .creditors__hero{
+                height: 100vh !important;
+            }
+        }
+
+        &-slide{
+            width: 100%;
+            position: relative;
+            height: 100vh !important;
+            
+            &-inner{
+                width: 100%;
+                position: relative;
+                top: 0;
+                left: 0;
+                height: 100%;
+                box-sizing: border-box;
+                padding: 260px 0 180px;
+                @include under(sm){
+                    display: flex;
+                    align-items: flex-end;
+                    padding: 200px 0 120px;
+                }
+            }
+
+            .image-container{
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 1;
+            }
+
+            .container{
+                position: relative;
+                z-index: 2;
+            }
+
+            &-content{
+                width: 55%;
+                color: c(white);
+                @include under(sm){
+                    width: 80%;
+                }
+                @include under(mobile){
+                    width: 100%;
+                }
+                .content{
+                    width: 100%;
+                    position: relative;
+                    text-transform: uppercase;
+                    padding: 0 0 28px;
+                    strong, b{
+                        color: c(blue);
+                        font-weight: 600;
+                    }
+
+                    &::after{
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        width: 56%;
+                        left: 0;
+                        bottom: 0;
+                        height: .2em;
+                        background: linear-gradient(
+                              to right,
+                              hwb(238 30% 0% / 0) 0%,
+                              hsla(238, 100%, 65%, 0.013) 8.1%,
+                              hsla(238, 100%, 65%, 0.049) 15.5%,
+                              hsla(238, 100%, 65%, 0.104) 22.5%,
+                              hsla(238, 100%, 65%, 0.175) 29%,
+                              hsla(238, 100%, 65%, 0.259) 35.3%,
+                              hsla(238, 100%, 65%, 0.352) 41.2%,
+                              hsla(238, 100%, 65%, 0.45) 47.1%,
+                              hsla(238, 100%, 65%, 0.55) 52.9%,
+                              hsla(238, 100%, 65%, 0.648) 58.8%,
+                              hsla(238, 100%, 65%, 0.741) 64.7%,
+                              hsla(238, 100%, 65%, 0.825) 71%,
+                              hsla(238, 100%, 65%, 0.896) 77.5%,
+                              hsla(238, 100%, 65%, 0.951) 84.5%,
+                              hsla(238, 100%, 65%, 0.987) 91.9%,
+                              hsl(238, 100%, 65%) 100%
+                        );
+                        @include under(mobile){
+                            width: 80%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

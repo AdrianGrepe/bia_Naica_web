@@ -1,0 +1,55 @@
+.btn{
+    opacity: 1;
+    border: none;
+    background: transparent;
+    padding: 0;
+    text-align: center;
+    cursor: pointer;
+    color: c(white);
+    @extend .txt-btn;
+
+    &--filled{
+        padding: .7em 3.5em;
+        border-radius: 2em;
+        background-color: c(blue);
+        @include under(mobile){
+            padding: .7em 2em;
+        }
+    }
+
+    &--filled-purple{
+        padding: .7em 3.5em;
+        border-radius: 2em;
+        background-color: c(purple);
+
+        @include under(mobile){
+            padding: .7em 2em;
+        }
+    }
+
+    &--filled-blue{
+        padding: .7em 3.5em;
+        border-radius: 2em;
+        background-color: c(blue);
+
+        @include under(mobile){
+            padding: .7em 2em;
+        }
+    }
+
+    &--menu{
+        width: 30px;
+        height: 20px;
+        background-image: url('/static/images/menu.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+
+    &--close{
+        width: 26px;
+        height: 26px;
+        background-image: url('/static/images/close.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+}

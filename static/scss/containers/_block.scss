@@ -1,0 +1,18 @@
+.wrapper{
+    width: 100vw;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.container{
+    width: calc(100% - 140px);
+    max-width: 1920px;
+    margin: 0 auto;
+    
+    @include over(l){
+        width: calc(100% - 280px);
+    }
+    @include under(sm){
+        width: calc(100% - 50px);
+    }
+}

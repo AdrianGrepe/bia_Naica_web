@@ -1,0 +1,190 @@
+.header{
+    width: 100%;
+    max-width: 100vw;
+    position: fixed;
+    z-index: 101;
+    top: 0;
+    left: 0;
+    box-sizing: border-box;
+    padding: 20px 0;
+    background-color: c(black);
+    @include under(mobile){
+        padding: 10px 0;
+    }
+
+    &__container{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+    }
+
+    &__logo{
+        max-width: 100%;
+        width: 11em;
+        @extend .txt-menu;
+        &-link{
+            display: block;
+            width: 100%;
+            svg{
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    &__menu{
+        max-width: 100%;
+        width: calc((100% - 11em) - 20px);
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+
+        &-list{
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+            align-items: center;
+            align-content: flex-end;
+            gap: 1.5em;
+
+            a{
+                color: c(white);
+                text-transform: uppercase;
+                @extend .txt-menu;
+            }
+            @include under(sm){
+                display: none;
+            }
+        }
+
+        &-mobile{
+            display: none;
+            @include under(sm){
+                display: block;
+            }
+        }
+    }
+
+    &__aside{
+        width: 100vw;
+        height: 100dvh;
+        background-color: c(black);
+        position: fixed;
+        z-index: 100;
+        top: 0;
+        left: 0;
+        padding: 85px 0 40px;
+        box-sizing: border-box;
+        display: none;
+
+        &-container{
+            width: 100%;
+            padding: 17px 0 0;
+            box-sizing: border-box;
+            max-height: calc(100dvh - 125px);
+            overflow-y: auto;
+            /* width */
+             &::-webkit-scrollbar {
+                width: 1px;
+            }
+            
+            /* Track */
+            &::-webkit-scrollbar-track {
+                background: transparent; 
+            }
+            
+            /* Handle */
+            &::-webkit-scrollbar-thumb {
+                background: rgba(0, 0, 0, 0);
+            }
+            
+            /* Handle on hover */
+            &::-webkit-scrollbar-thumb:hover {
+                background: transparent; 
+            }
+        }
+
+        &-close{
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        &-nav{
+            width: 100%;
+            margin: 10px 0 0;
+            &-list{
+                width: 100%;
+
+                li:not(:last-child){
+                    padding: 0 0 5px;
+                    border-bottom: 2px solid c(white);
+                    margin: 0 0 10px;
+                }
+
+                li a{
+                    color: c(white);
+                    width: max-content;
+                    @extend .txt-menu;
+                    text-transform: uppercase;
+                }
+            }
+        }
+
+        &-footer{
+            width: 100%;
+            margin: 50px 0 0;
+            color: c(white);
+            &-copy{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin: 55px 0 0;
+
+                .social-media{
+                    width: max-content;
+                    max-width: 100%;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: flex-start;
+                    align-items: center;
+                    align-content: flex-start;
+                    gap: 2em;
+        
+                    &-link{
+                        display: block;
+                        width: 2em;
+                        svg{
+                            display: block;
+                            width: 100%;
+                            height: auto;
+                        }
+                        @include under(mobile){
+                            width: 1em;
+                        }
+                    }
+                    @include under(mobile){
+                        gap: .8em;
+                    }
+                }
+        
+                .legend{
+                    text-transform: uppercase;
+                    margin: 15px 0 20px;
+                    text-align: center;
+                }
+        
+                .copy{
+                    text-transform: uppercase;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

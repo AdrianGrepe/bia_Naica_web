@@ -1,0 +1,20 @@
+$colors: (
+	white:			#ffffff,
+    black: 			#000000,
+    blue:           #4B50FF,
+    purple:         #9650FF,
+    gray:           #707070,
+    gray-light:     #FAFAFA,
+    aqua:           #78D2C3
+	);
+
+@function c($color:base) {
+	@return map-get($colors, $color);
+}
+
+
+//no borrar
+$colorForeground: c();
+$colorBackground: c();
+$colorFeatured: c();
+$colorError: c();

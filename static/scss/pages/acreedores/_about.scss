@@ -1,0 +1,32 @@
+.creditors{
+
+    &__about{
+        width: 100%;
+        box-sizing: border-box;
+        padding: 100px 0;
+
+        @include under(mobile){
+            padding: 100px 0 50px;
+        }
+
+        &-title{
+            width: 90%;
+            margin: 0 auto 40px;
+
+            .title{
+                color: c(purple);
+                text-align: center;
+                text-transform: uppercase;
+                letter-spacing: 1.8px;
+            }
+            @include under(mobile){
+                width: 100%;
+            }
+        }
+
+        &-content{
+            width: 100%;
+            color: c(gray);
+        }
+    }
+}

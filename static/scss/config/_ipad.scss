@@ -1,0 +1,67 @@
+///
+/// An "@media" mixin that responds to an iPad-Pro Portrait, Landscape 12.9" & 10.5"
+/// Sizes based on https://css-tricks.com/snippets/css/media-queries-for-standard-devices/
+/// Mixin modified over & under by Diego Villaseñor
+/// @param  map key or string $min & $max  Map with the names of breaks and their units or only the desired unit or the Map key.
+/// @author Marlene Serrano
+/// @content 
+////
+
+// Portrait
+//Recibe como entrada el width del iPad de 10" o 12"
+//Se declara el mismo valor en min & max para evitar confusión con Desktop
+@mixin ipad-portrait($ipad) {
+    @if map_has_key($ipads, $ipad) {
+        @media only screen 
+                    and (min-device-width: map_get($ipads, $ipad)) 
+                    and (max-device-width: map_get($ipads, $ipad)) 
+                    and (orientation: portrait) 
+                    and (-webkit-min-device-pixel-ratio: 2){
+                        @content;
+                    }
+    }
+    @else {
+        @media only screen 
+                    and (min-device-width: $ipad) 
+                    and (max-device-width: $ipad) 
+                    and (orientation: portrait) 
+                    and (-webkit-min-device-pixel-ratio: 2){
+                        @content;
+                    }
+    }
+} 
+
+//Landscape
+//Recibe como entrada el width del iPad de 10" o 12"
+//Se declara el mismo valor en min & max para evitar confusión con Desktop
+@mixin ipad-landscape($ipad) {
+    @if map_has_key($ipads, $ipad) {
+        @media only screen 
+                    and (min-device-width: map_get($ipads, $ipad)) 
+                    and (max-device-width: map_get($ipads, $ipad)) 
+                    and (orientation: landscape) 
+                    and (-webkit-min-device-pixel-ratio: 2){
+                        @content;
+                    }
+    }
+    @else {
+        @media only screen 
+                    and (min-device-width: $ipad) 
+                    and (max-device-width: $ipad) 
+                    and (orientation: landscape) 
+                    and (-webkit-min-device-pixel-ratio: 2){
+                        @content;
+                    }
+    }
+} 
+
+// Portrait and Landscape
+//Recibe como entrada el width en Portrait, width en Landscape en ese orden estricto
+@mixin ipad-both($ipadP, $ipadL) {
+    @media only screen 
+                and (min-device-width: map_get($ipads, $ipadP)) 
+                and (max-device-width: map_get($ipads, $ipadL)) 
+                and (-webkit-min-device-pixel-ratio: 2){
+                    @content;
+                }
+} 

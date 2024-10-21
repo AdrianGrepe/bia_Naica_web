@@ -1,0 +1,160 @@
+.insurance{
+
+    &__information{
+        width: 100%;
+        &-grid{
+            width: 100%;
+            overflow-x: auto;
+            padding: 15px;
+            &-inner{
+                width: 100%;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr;
+                column-gap: 15px;
+                row-gap: 40px;
+                padding-right: 30px;
+            }
+            /* width */
+            &::-webkit-scrollbar {
+                width: 1px;
+            }
+            
+            /* Track */
+            &::-webkit-scrollbar-track {
+                background: transparent; 
+            }
+            
+            /* Handle */
+            &::-webkit-scrollbar-thumb {
+                background: rgba(0, 0, 0, 0);
+            }
+            
+            /* Handle on hover */
+            &::-webkit-scrollbar-thumb:hover {
+                background: transparent; 
+            }
+        }
+
+        &-block{
+            width: 100%;
+            min-width: 420px;
+            background-color: c(gray-light);
+            color: c(gray);
+            box-shadow: 0px 6px 10px -1px rgba(0,0,0,0.37);
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            display: inline-flex;
+            justify-content: space-between;
+            align-content: space-between;
+            flex-wrap: wrap;
+
+            @include under(sm){
+                min-width: 300px;
+            }
+
+            .upper-container{
+                width: 100%;
+                .image-container{
+                    width: 100%;
+                    padding-top: calc( 300 / 530 * 100%);
+                }
+                .title{
+                    width: 100%;
+                    background-color: c(blue);
+                    color: c(white);
+                    text-align: center;
+                    box-sizing: border-box;
+                    padding: 5px 50px;
+                    letter-spacing: 1.8px;
+                    min-height: 70px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    &--purple{
+                        background-color: rgba($color: #9650FF, $alpha: .8);
+                    }
+                }
+            }
+
+            .data-container{
+                box-sizing: border-box;
+                width: 100%;
+                border-bottom-left-radius: 17px;
+                border-bottom-right-radius: 17px;
+                .content{
+                    width: 100%;
+                    box-sizing: border-box;
+                    padding: 30px 20px 45px;
+                    text-align: center;
+                }
+                .logos-container{
+                    width: 100%;
+                    padding: 0 20px 50px;
+                    box-sizing: border-box;
+                    display: flex;
+                    justify-content: space-between;
+                    flex-wrap: nowrap;
+                    gap: 10px;
+
+                    @include under(sm){
+                        flex-wrap: wrap;
+                    }
+                    
+                    &--2{
+                        .image{
+                            width: 40%;
+                            height: auto;
+                            max-height: 50px;
+                        }
+
+                        .image:first-child{
+                            object-position: left;
+                        }
+
+                        .image:last-child{
+                            object-position: right;
+                        }
+                    }
+
+                    &--3{
+                        .image{
+                            width: auto;
+                            height: 50px;
+                            max-width: 33.3%;
+                        }
+
+                        .image:first-child{
+                            object-position: left;
+                        }
+
+                        .image:last-child{
+                            object-position: right;
+                        }
+                    }
+                    &--6{
+                        .image{
+                            width: auto;
+                            height: 26px;
+                            max-width: 33.3%;
+                        }
+
+                        .image:first-child{
+                            object-position: left;
+                        }
+
+                        .image:last-child{
+                            object-position: right;
+                        }
+                    }
+                }
+            }
+        }
+
+        &-cta{
+            margin: 40px 0 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+    }
+}

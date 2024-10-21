@@ -1,0 +1,58 @@
+%strong{
+    strong, b{
+        font-weight: 600;
+    }
+}
+
+.ttl-120{
+    @extend %montserrat-bold;
+    @extend %strong;
+    @include responsive-font(70px, 120px, 110px, 180px);
+    letter-spacing: 1px;
+    strong, b{
+        @include responsive-font(110px, 180px, 110px, 180px);
+        font-weight: 900;
+    }
+}
+
+.ttl-70{
+    @extend %montserrat-bold;
+    @extend %strong;
+    @include responsive-font(40px, 70px, 47px, 86px);
+    letter-spacing: 1.1px;
+}
+
+.ttl-50{
+    @extend %montserrat-bold;
+    @extend %strong;
+    @include responsive-font(30px, 50px, 37px, 61px);
+    letter-spacing: 1.1px;
+}
+
+.ttl-50-2{
+    @extend %montserrat-bold;
+    @extend %strong;
+    @include responsive-font(30px, 50px, 37px, 61px);
+}
+
+
+.ttl-50-500{
+    @extend %montserrat-medium;
+    @extend %strong;
+    @include responsive-font(30px, 50px, 37px, 80px);
+    letter-spacing: 1.1px;
+}
+
+.ttl-40{
+    @extend %montserrat-bold;
+    @extend %strong;
+    @include responsive-font(25px, 40px, 30px, 49px);
+    letter-spacing: 1.8px;
+}
+
+.ttl-25{
+    @extend %montserrat-bold;
+    @extend %strong;
+    @include responsive-font(16px, 25px, 30px, 19px);
+    letter-spacing: 1.8px;
+}

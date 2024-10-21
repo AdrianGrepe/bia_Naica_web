@@ -1,0 +1,43 @@
+///
+///A Map containing the breakpoints used for the project, as weel as for generating the grid classes. The responsive mixins (respond-to, biggerThan and smallerThan) accept either the map keys, strings and variables, so there is no need to reference the map keys in any special way.
+///
+///Example of their use in a mixin:
+///		@include under(md) {
+///		   //Your code
+///		}
+///
+///@type {map}
+
+$breaks: (
+	xxs: 320px,
+	mobile: 650px,
+	sm: 950px,
+	md: 1024px,
+	md2: 1100px,
+	md1: 1280px,
+    l: 1740px,
+	xl: 1920px,
+);
+
+//Breakpoints for  iPadPro 12.9" & 10.5" P: Portrait L: Landscape
+//Example of their use in a mixin:
+//	@include ipad-portrait(ipad10P){
+// 		//Code
+//  }
+//Use mixin ipad-portrait for orientation:portrait
+//Use mixin ipad-landscape for orientation:landscape
+//Use mixin ipad-both to ignore orientation it needs two parameters: Portrait width and Landscape width in that order.
+
+$ipads: (
+	//iPad 10.5"
+	ipad10P : 834px, 
+	ipad10L : 1112px,
+	//iPad 12.9"
+	ipad12P : 1024px,
+	ipad12L : 1366px,
+);
+
+@function b($break) {
+	@return map-get($breaks, $break);
+
+}

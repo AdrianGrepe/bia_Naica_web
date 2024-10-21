@@ -1,0 +1,22 @@
+
+// Mixin para la fuente responsiva usando clamp()
+//
+// Parámetros:
+// $font-size-min: Tamaño de fuente mínimo
+// $font-size-max: Tamaño de fuente máximo
+// $line-height-min: Altura de línea mínima
+// $line-height-max: Altura de línea máxima
+@mixin responsive-font($font-size-min, $font-size-max, $line-height-min, $line-height-max) {
+    font-size: clamp(#{$font-size-min}, #{($font-size-min + $font-size-max) / 2}, #{$font-size-max});
+    line-height: clamp(#{$line-height-min}, #{($line-height-min + $line-height-max) / 2}, #{$line-height-max});
+    
+    @include under(md1) {
+        font-size: $font-size-min;
+        line-height: $line-height-min;
+    }
+    
+    @include over(xl) {
+        font-size: $font-size-max;
+        line-height: $line-height-max;
+    }
+}
