@@ -245,7 +245,7 @@
                       </div>
                       <button type="submit" id="btn_submit" class="btn btn--filled-purple">Quiero ser contactado</button>
                       <label class="label" for="privacy">
-                          <input type="checkbox" name="privacy" id="privacy" class="checkbox">He leído y acepto el &nbsp;<a href="/assets/pdf/aviso_privacidad_naica_final.pdf" target="blank">aviso de privacidad</a>
+                          <input type="checkbox" name="privacy" id="privacy" class="checkbox">He leído y acepto el &nbsp;<a href="{{ url_for('static', filename='pdf/aviso_privacidad_naica_final.pdf') }}" target="blank">aviso de privacidad</a>
                       </label>
                   </form>
               </div>
