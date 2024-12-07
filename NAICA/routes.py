@@ -32,6 +32,22 @@ def index():
 def gracias():
     return render_template('gracias.html')
 
+@app.route('/imagenesA')
+def imagenesA():
+    return render_template('imagenesA.html')
+
+@app.route('/imagenesB')
+def imagenesB():
+    return render_template('imagenesB.html')
+
+@app.route('/imagenesC')
+def imagenesC():
+    return render_template('imagenesC.html')
+
+@app.route('/imagenesD')
+def imagenesD():
+    return render_template('imagenesD.html')
+
 @app.route('/seguros')
 def seguros():
     return render_template('seguros.html')
